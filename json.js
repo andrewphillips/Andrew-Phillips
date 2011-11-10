@@ -1,4 +1,5 @@
 //Andrew Phillips
+//SDI 1111 - Project 3
 
 var json = {
 		"categories": {

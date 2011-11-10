@@ -1,7 +1,7 @@
 //Andrew Phillips
 // November 10 2011
 // Project 3
-// Apps & Cases
+// Apps Part Deux
 
 
 //global variables
@@ -38,7 +38,7 @@ var appStoreList = {
 // Method Procedure _I_
 var	lookedAdventure = {
 		type: "game",
-		categories: 19,
+		categories: 19, //Property String
 			adventureStart: function (search) {
 			console.log("I think this " + this.type + " is in the " + search + " genre.");
 			if (this.categories >= 20) {
@@ -53,11 +53,7 @@ var	lookedAdventure = {
 		}	
 	}
 };
-console.log("I heard about a sweet iPhone game that just came out, and I want to buy it!");
-console.log("It\'s called " + appName + ".");
-console.log("I\'ll check the AppStore to see if it\s there.");
 
-lookedAdventure.adventureStart("Adventure");
 
 
 // Method Function_II_ -- Arguement: Boolean & Number, Return: Boolean, Conditional & Nested Conditional, Property: Number
@@ -69,7 +65,7 @@ var	categoryTypes = {
 			if ( needRPG <= this.RPG ) {
 				if( needAction == this.Action) {
 					console.log("I guess it\'s not an Adventure game.  I should look in the Action genre, or possibly others.");
-					return true; 
+					return true; //boolean returns
 				} else {
 					console.log("I found the game!  That was quick!");
 					return false; 
@@ -81,14 +77,6 @@ var	categoryTypes = {
 		}
 };
 
-console.log("Anyhoo, I think I am getting close to finding my game!" );
-console.log("Actually, maybe not :-(");
-
-if (categoryTypes.scrollKing(15, true)) {
-	console.log("I can't believe that I have to flick through all the different genres of games.");
-} else {
-	console.log("I just love looking through all of these " + categoryTypes.RPG + " genres.");
-};
 
 
 // Method Accessor _III_-- checking apps within the function,  Arguement: Array
@@ -109,15 +97,10 @@ var	genreTypes = {
 		}
 };
 
-var areThereTooManyApps = genreTypes.genreGet(appStoreList.apps);
-console.log("Yep, That makes up the " + areThereTooManyApps + " different categories.  That probably means thousands of possibilities.  Ugh.");
-
-console.log("Why can't I find what I'm looking for?  This is just waaaay to difficult!");
-console.log("I heard about another application that can help you figure out the probability of where something is on the AppStore.  I'll use Helper_App and maybe I'll find it.");
-console.log("Let's see the results it gave me:");
 
 
-// Return Array
+
+// Return Array _IV_
 function helps() {
 	var helperApp =[];
 	helperApp[0] = "Adventure";
@@ -130,7 +113,7 @@ function helps() {
 console.log(helps());
 console.log("Well at least my search has been narrowed.  Now I'll check the probability of where it can be on the AppStore.");
 
-// Property: object - call from json file
+// Property: object - call from json file _V_
 var	categoryList = {
 			bigList: function (json) {
 				console.log("Well this app seems to work just fine!  Look at all these results:");
@@ -144,11 +127,11 @@ var	categoryList = {
 				return categoryList;
 			}
 };
-categoryList.bigList(json);
 
 
 
-// Method Mutator searching my main 3 results yields a "bit more than I can chew" 
+
+// Method Mutator searching my main 3 results yields a "bit more than I can chew" _VI_
 
 var	lotsOfApps = {
 		searchTheStore: 3,
@@ -180,10 +163,49 @@ var	lotsOfApps = {
 				
 		}
 		
-		return howManyApps;
+		return howManyApps; //return object
 	}	
 };
 
+
+
+
+// Run the functions!
+
+//_I_
+console.log("I heard about a sweet iPhone game that just came out, and I want to buy it!");
+console.log("It\'s called " + appName + ".");
+console.log("I\'ll check the AppStore to see if it\s there.");
+
+lookedAdventure.adventureStart("Adventure");
+
+//_II_
+console.log("Anyhoo, I think I am getting close to finding my game!" );
+console.log("Actually, maybe not :-(");
+
+if (categoryTypes.scrollKing(15, true)) {
+	console.log("I can't believe that I have to flick through all the different genres of games.");
+} else {
+	console.log("I just love looking through all of these " + categoryTypes.RPG + " genres.");
+};
+
+//_III_
+var areThereTooManyApps = genreTypes.genreGet(appStoreList.apps);
+console.log("Yep, That makes up the " + areThereTooManyApps + " different categories.  That probably means thousands of possibilities.  Ugh.");
+
+console.log("Why can't I find what I'm looking for?  This is just waaaay to difficult!");
+console.log("I heard about another application that can help you figure out the probability of where something is on the AppStore.  I'll use Helper_App and maybe I'll find it.");
+console.log("Let's see the results it gave me:");
+
+//_IV_
+console.log(helps());
+console.log("Well at least my search has been narrowed.  Now I'll check the probability of where it can be on the AppStore.");
+
+
+//_V_
+categoryList.bigList(json);
+
+//_VI_
 lotsOfApps.appsInGenre(json2);
 
 console.log("Enough of this, there must be an easier way.  I've wasted so much time fiddling with probability.");
