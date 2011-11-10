@@ -3,6 +3,14 @@
 // Project 3
 // Apps & Cases
 
+
+//global variables
+var appName = "CRAZY SUPER MONSTER SLAYER on SUNDAY";
+var omgApps = [ "Puzzle", "RPG", "Family"];
+var omgHowMany = [ 475, 1000, 973];
+var helperApp = [];
+
+
 //Property Array
 var appStoreList = {
 		apps: [  "Action", 
@@ -26,10 +34,7 @@ var appStoreList = {
 					" and Word", ]
 };
 
-//global variables
-var appName = "CRAZY SUPER MONSTER SLAYER on SUNDAY";
-var omgApps = [ "Puzzle", "RPG", "Family"];
-var omgHowMany = [ 475, 1000, 973];
+
 
 
 // Method Procedure _I_
@@ -88,15 +93,16 @@ if (categoryTypes.scrollKing(15, true)) {
 };
 
 
-// Method Accessor _III_ --
+// Method Accessor _III_-- checking apps within the function,  Arguement: Array
 
 var	genreTypes = {
 		genreList: 19,
 		genreGet: function (tooMany) {
 			var lookingThroughGenres;
 			console.log("Looking through all the categories is taking forever! I wonder how many I'll really look through.  I'll check all their names." + "  There seems to be " + tooMany + ".");
+			console.log("Now to double check:");
 			numberGenres = 1;
-				while ( numberGenres <= this.genreList ) {
+				while ( this.genreList >= numberGenres ) {
 					console.log(numberGenres);
 					numberGenres++; // Here's math
 				}
@@ -109,17 +115,44 @@ var areThereTooManyApps = genreTypes.genreGet(appStoreList.apps);
 console.log("That makes up the " + areThereTooManyApps + " different categories.  That probably means thousands of possibilities.  Ugh.");
 
 console.log("Why can't I find what I'm looking for?  This is just waaaay to difficult!");
+console.log("I heard about another application that can help you figure out the probability of where something is on the AppStore.  I'll use that and maybe it can help.");
+console.log("Let's see the results it gave me:");
 
 
-// Method Mutator
+// Return Array
+function helps() {
+	var helperApp =[];
+	helperApp[0] = "Adventure";
+	helperApp[1] = " Action";
+	helperApp[2] = " and Role Playing";
+	
+	return helperApp.join(); // array return
+}
+
+console.log(helps());
+console.log("Well at least my search has been narrowed.  Now I'll check the probability of where it can be on the AppStore.");
+
+// Property: object - call from json file
+var	categoryList = {
+			bigList: function (json) {
+				console.log("Well this app seems to work just fine!  Look at all these results:");
+			
+			}
+
+};
 
 
 
 
 
 
+// Method Mutator  giving myself a chance to find my game with an app that estimates probability 
+/*
+var	lotsOfApps = {
+		
 
 
+}
 
 
 
@@ -133,3 +166,4 @@ var soManyApps = function() {
 	varNamesEscapeMe = "Maybe it really is a " + omgApps[2] + " game.  I didn't totally consider that genre.";
 	return varNamesEscapeMe;
 };
+*/
