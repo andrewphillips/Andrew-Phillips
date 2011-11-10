@@ -4,79 +4,79 @@ var json = {
 		"categories": {
 			"Adventure": {
 					"name": "Adventure",
-					"chanceToFind": 65%
+					"chanceToFind": "65%"
 			},
 			"Arcade": {
 					"name": "Arcade",
-					"chanceToFind": 3%
+					"chanceToFind": "3%"
 			},
 			"Board": {
 					"name": "Board",
-					"chanceToFind": 1%
+					"chanceToFind": "1%"
 			},
 			"Action": {
 					"name": "Action",
-					"chanceToFind": 78%
+					"chanceToFind": "78%"
 			},
 			"Card": {
 					"name": "Card",
-					"chanceToFind": 1%
+					"chanceToFind": "1%"
 			},
 			"Casino": {
 					"name": "Casino",
-					"chanceToFind": 1%
+					"chanceToFind": "1%"
 			},
 			"Dice": {
 					"name": "Dice",
-					"chanceToFind": 1%
+					"chanceToFind": "1%"
 			},
 			"Educational": {
 					"name": "Educational",
-					"chanceToFind": 1%
+					"chanceToFind": "1%"
 			},
 			"Family": {
 					"name": "Family",
-					"chanceToFind": 2%
+					"chanceToFind": "2%"
 			},
 			"Kids": {
 					"name": "Kids",
-					"chanceToFind": 15%
+					"chanceToFind": "15%"
 			},
 			"Music": {
 					"name": "Music",
-					"chanceToFind": 1%
+					"chanceToFind": "1%"
 			},
 			"Puzzle": {
 					"name": "Puzzle",
-					"chanceToFind": 11%
+					"chanceToFind": "11%"
 			},
 			"Racing": {
 					"name": "Racing",
-					"chanceToFind": 3%
+					"chanceToFind": "3%"
 			},
 			"Role Playing": {
 					"name": "Role Playing",
-					"chanceToFind": 55%
+					"chanceToFind": "55%"
 			},
 			"Simulation": {
 					"name": "Simulation",
-					"chanceToFind": 45%
+					"chanceToFind": "45%"
 			},
 			"Sports": {
 					"name": "Sports",
-					"chanceToFind": 8%
+					"chanceToFind": "8%"
 			},
 			"Strategy": {
 					"name": "Strategy",
-					"chanceToFind": 17%
+					"chanceToFind": "17%"
 			},
 			"Trivia": {
 					"name": "Trivia",
-					"chanceToFind": 1%
+					"chanceToFind": "1%"
 			},
 			"Word": {
 					"name": "Word",
-					"chanceToFind": 1%
+					"chanceToFind": "1%"
 			},
 		}
 };

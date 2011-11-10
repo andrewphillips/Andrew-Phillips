@@ -136,18 +136,22 @@ console.log("Well at least my search has been narrowed.  Now I'll check the prob
 var	categoryList = {
 			bigList: function (json) {
 				console.log("Well this app seems to work just fine!  Look at all these results:");
-			
+				
+				for (var key in json.categories) {
+					var list = json.categories[key];
+					console.log(list.name + " :: " + list.chanceToFind);
+				}
+				console.log("Looks like the main three categories are from Helper_App's first output.");
+				console.log("I'm glad that I found an app to help me.");
+				return categoryList;
 			}
-
 };
-
-
-
+categoryList.bigList(json);
 
 
 
 // Method Mutator  giving myself a chance to find my game with an app that estimates probability 
-/*
+
 var	lotsOfApps = {
 		
 
@@ -166,4 +170,3 @@ var soManyApps = function() {
 	varNamesEscapeMe = "Maybe it really is a " + omgApps[2] + " game.  I didn't totally consider that genre.";
 	return varNamesEscapeMe;
 };
-*/
