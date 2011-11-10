@@ -89,14 +89,15 @@ var json2 = {
 			"thought": false
 		},
 		{
+			"name": "Role Playing",
+			"chance": "55",
+			"thought": false
+		},			
+		{
 			"name": "Action",
 			"chance": "78",
 			"thought": true
 		},	
-		{
-			"name": "Role Playing",
-			"chance": "55",
-			"thought": false
-		},	
+
 	]
 };
