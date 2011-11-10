@@ -3,6 +3,30 @@
 // Project 3
 // Apps & Cases
 
+//Property Array
+var appStoreList = {
+		apps: [  "Action", 
+					" Adventure", 
+					" Arcade", 
+					" Board", 
+					" Card", 
+					" Casino", 
+					" Dice", 
+					" Educational", 
+					" Family", 
+					" Kids", 
+					" Music", 
+					" Puzzle", 
+					" Racing", 
+					" Role Playing", 
+					" Simulation", 
+					" Sports", 
+					" Strategy", 
+					" Trivia", 
+					" and Word", ]
+};
+
+//global variables
 var appName = "CRAZY SUPER MONSTER SLAYER on SUNDAY";
 var omgApps = [ "Puzzle", "RPG", "Family"];
 var omgHowMany = [ 475, 1000, 973];
@@ -58,10 +82,30 @@ console.log("Anyhoo, I think I am getting close to finding my game!" );
 console.log("Actually, maybe not :-(");
 
 if (categoryTypes.scrollKing(15, true)) {
-	console.log("I can't believe that I have to flick through " + categoryTypes.RPG + " different genres of games.");
+	console.log("I can't believe that I have to flick through all these different genres of games.");
 } else {
 	console.log("I just love looking through all of these " + categoryTypes.RPG + " genres.");
 };
 
 
 // Method Accessor _III_ --
+
+var	genreTypes = {
+		genreList: 19,
+		genreGet: function (tooMany) {
+			var lookingThroughGenres;
+			console.log("Looking through all the categories is taking forever! I wonder how many I'll really look through.  I'll check all their names." + "  There seems to be " + tooMany + ".");
+			numberGenres = 1;
+				while ( numberGenres <= this.genreList ) {
+					console.log(numberGenres);
+					numberGenres++; // Here's math
+				}
+			lookingThroughGenres = this.genreList;
+			return lookingThroughGenres;	// this should return a number		
+		}
+};
+
+var areThereTooManyApps = genreTypes.genreGet(appStoreList.apps);
+console.log("That makes up the " + areThereTooManyApps + " different categories.  That probably means thousands of possibilities.  Ugh.");
+
+console.log("Why can't I find what I'm looking for?  This is just waaaay to difficult!");
