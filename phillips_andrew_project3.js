@@ -109,3 +109,27 @@ var areThereTooManyApps = genreTypes.genreGet(appStoreList.apps);
 console.log("That makes up the " + areThereTooManyApps + " different categories.  That probably means thousands of possibilities.  Ugh.");
 
 console.log("Why can't I find what I'm looking for?  This is just waaaay to difficult!");
+
+
+// Method Mutator
+
+
+
+
+
+
+
+
+
+
+
+var soManyApps = function() {
+	var willIfind;
+		var findMyApp = 2
+			console.log("Let me get my bearings.  I have been at this for 30 minutes - I need to find it soon!");
+		for (var i = 0; i < omgHowMany.length; i++) {
+			console.log("The " + omgApps[i] + " has " + omgHowMany[i] + " apps, yet it really feels like they have " + omgHowMany[i]*findMyApp + " apps!" );
+		};
+	varNamesEscapeMe = "Maybe it really is a " + omgApps[2] + " game.  I didn't totally consider that genre.";
+	return varNamesEscapeMe;
+};
