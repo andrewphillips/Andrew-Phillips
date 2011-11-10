@@ -150,16 +150,36 @@ categoryList.bigList(json);
 
 
 
-// Method Mutator  giving myself a chance to find my game with an app that estimates probability 
+// Method Mutator searching my main 3 results yields a "bit more than I can chew" 
 
 var	lotsOfApps = {
-		
+		searchTheStore: 3,
+		resultSearch: 1,
+		appsInGenre: function (json) {
+			var howManyApps;
+				console.log("Now that I have my data, I need to dig into these genres and see what I can find.");
+			for (var i = 0; i < json.big3.length; i++) {
+				console.log(" ");
+				if (json.big3[i].thought === false) {
+					console.log("I don't need to keep searching this genre.");
+					//nested loop time!!!
+					for (var u = 1; u <= this.searchTheStore; u++) {
+						console.log("It seems this category has " + this.resultSearch * json.big3[i].chance + " percent chance for me to find something.  This is the " + u + " category I've looked in.");
+					}
+				} else {
+					console.log("It looks like my app is inside the " + json.big3[i].name + " genre.");
+			}
+		}
+		console.log(" ");
+		thisGenre = "I will look in the " + json.big3.name[1] + "genre.";
+		return howManyApps;
+	}	
+};
 
+var searchingApps = lotsOfApps.appsInGenre(json2);
+console.log(searchingApps);
 
-}
-
-
-
+/*
 var soManyApps = function() {
 	var willIfind;
 		var findMyApp = 2
@@ -170,3 +190,4 @@ var soManyApps = function() {
 	varNamesEscapeMe = "Maybe it really is a " + omgApps[2] + " game.  I didn't totally consider that genre.";
 	return varNamesEscapeMe;
 };
+*/

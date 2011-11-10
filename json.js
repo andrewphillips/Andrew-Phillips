@@ -85,18 +85,18 @@ var json2 = {
 	"big3": [
 		{
 			"name": "Adventure",
-			"chance": "65%",
-			"thought": "I should look here, but there might be a better option."
+			"chance": "65",
+			"thought": false
 		},
 		{
 			"name": "Action",
-			"chance": "78%",
-			"thought": "This is my best chance at finding my game."
+			"chance": "78",
+			"thought": true
 		},	
 		{
 			"name": "Role Playing",
-			"chance": "55%",
-			"thought": "My least chance at finding my game.  I should still look though."
+			"chance": "55",
+			"thought": false
 		},	
 	]
 };
