@@ -26,24 +26,42 @@ var	lookedAdventure = {
 		}	
 	}
 };
+console.log("I heard about a sweet iPhone game that just came out, and I want to buy it!");
+console.log("It\'s called " + appName + ".");
+console.log("I\'ll check the AppStore to see if it\s there.");
 
 lookedAdventure.adventureStart("Adventure");
 
 
-// _II_
+// Method Function_II_ -- Arguement: Boolean & Number, Return: Boolean, Conditional & Nested Conditional, Property: Number
 
-var scrollKing = function ( needRPG, needAction ) {
-	var notAdventure;
-	if ( needRPG <= 20 ) {
-		if( needAction === true) {
-			console.log("I guess it\'s not an Adventure game.  I should look in the Action genre, or possibly others.");
-		} else {
-			console.log("I found the game!  That was quick!");
-		};
-	} else {
-		console.log("The game has nothing to do with adventure.  Why am I looking here?");
-	};
-
-	notAdventure = "Oh wow.  There are " + needRPG + " genres on the AppStore.";
-	return notAdventure;
+var	categoryTypes = {
+		RPG: 19,
+		Action: true,
+		scrollKing: function ( needRPG, needAction ) {
+			if ( needRPG <= this.RPG ) {
+				if( needAction == this.Action) {
+					console.log("I guess it\'s not an Adventure game.  I should look in the Action genre, or possibly others.");
+					return true; 
+				} else {
+					console.log("I found the game!  That was quick!");
+					return false; 
+				}
+			} else {
+				console.log("The game has nothing to do with adventure.  Why am I looking here?");
+				return false; 
+			}
+		}
 };
+
+console.log("Anyhoo, I think I am getting close to finding my game!" );
+console.log("Actually, maybe not :-(");
+
+if (categoryTypes.scrollKing(15, true)) {
+	console.log("I can't believe that I have to flick through " + categoryTypes.RPG + " different genres of games.");
+} else {
+	console.log("I just love looking through all of these " + categoryTypes.RPG + " genres.");
+};
+
+
+// Method Accessor _III_ --
